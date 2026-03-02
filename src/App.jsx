@@ -1,3 +1,7 @@
+import AdminDashboard from "./pages/AdminDashboard.jsx";
+
+// Dentro de <Routes>:
+<Route path="/admin" element={<AdminDashboard />} />
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout.jsx";
 import Dashboard from "./pages/Dashboard.jsx";

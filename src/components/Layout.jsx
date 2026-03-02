@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Layout({ children }) {
   return (
     <div style={{ display: "flex", minHeight: "100vh", fontFamily: "Arial" }}>
@@ -13,9 +15,12 @@ function Layout({ children }) {
       >
         <h2 style={{ color: "#d62828" }}>ONEN</h2>
         <hr />
-        <p style={{ cursor: "pointer" }}>Dashboard</p>
-        <p style={{ cursor: "pointer" }}>Inspecciones</p>
-        <p style={{ cursor: "pointer" }}>Reportes</p>
+        <nav style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+          <Link to="/" style={{ textDecoration: "none", color: "#333" }}>Dashboard</Link>
+          <Link to="/inspecciones" style={{ textDecoration: "none", color: "#333" }}>Inspecciones</Link>
+          <Link to="/reportes" style={{ textDecoration: "none", color: "#333" }}>Reportes</Link>
+          <Link to="/admin" style={{ textDecoration: "none", color: "#333" }}>Administrador</Link>
+        </nav>
       </div>
 
       {/* Main Content */}
